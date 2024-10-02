@@ -8,7 +8,7 @@ description: This is *the* god damn first post of all time.
 toc: false
 ---
 
-# Everyone Is Lying To You For Money
+# The First Blog Post
 
 ---
 
