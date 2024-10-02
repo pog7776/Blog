@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Everyone Is Lying To You For Money
 date: 2024-10-02 12:13
 categories: [General]
