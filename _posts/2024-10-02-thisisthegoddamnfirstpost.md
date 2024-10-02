@@ -1,6 +1,6 @@
 ---
 title: Everyone Is Lying To You For Money
-date: 2024-10-03 12:13
+date: 2024-10-02 12:13
 categories: [General]
 tags: general
 author: pog
