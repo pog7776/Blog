@@ -3,7 +3,7 @@ title: Everyone Is Lying To You For Money
 date: 2024-10-03 12:13
 categories: [General]
 tags: general
-author: <pog>
+author: pog
 description: This is *the* god damn first post of all time.
 toc: false
 ---
