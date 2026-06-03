@@ -73,6 +73,18 @@ public class StartIEnumeratorTest : MonoBehaviour
 }
 ```
 
+The idea behind this script is to watch for any change in the execution order of two loops:
+<br>
+The `while` loop in `Start` and the bog standard `Update` loop.
+
+We use `_isStart` to track if the last loop executed was in the Start method.
+
+If `_isStart` is true in while executing the Start method, we log a warning.
+<br>
+If `_isStart` is false in while executing the Update method, we log a warning.
+<br>
+(The only alternative being the previous loop was the Update loop.)
+
 > The relevant Unity execution order is as follows:
 > 
 > 1. `Start`
@@ -90,6 +102,7 @@ So stepping through the first few frames of this script we'll get:
 
 Notice that double update we get between the first and second frame?
 
+![Log output](/assets/img/blog/2026-06-03-unityeventcoroutines/banner.png){: width="403" height="296" .w-50 .right}
 In the first frame the `Start` contents will run before `Update` as expected.
 <br>
 After the second frame `Update` will always execute before the `Start` coroutine.
