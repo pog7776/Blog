@@ -122,7 +122,7 @@ comments:
   giscus:
     repo: pog7776/Blog # <gh-username>/<repo>
     repo_id: R_kgDOM6J1-A
-    category: General
+    category: Comments
     category_id: DIC_kwDOM6J1-M4C-ZAV
     mapping: title # optional, default to 'pathname'
     strict: 1 # optional, default to '0'
