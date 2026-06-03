@@ -95,10 +95,11 @@ If `_isStart` is false in while executing the Update method, we log a warning.
 
 So stepping through the first few frames of this script we'll get:
 
-|                | Frame 1                      | Frame 2                        | Frame 3                        |
-|----------------|------------------------------|--------------------------------|--------------------------------|
-| **Call**       | `Start` → `Update`           | `Update` → `Start Coroutine`   | `Update` → `Start Coroutine`   |
-| **Log output** | `Start loop` → `Update loop` | `Double Update` → `Start loop` | `Update loop` → `Start loop`   |
+| Frames      | Call Order                   | Log Output                     |
+|-------------|------------------------------|--------------------------------|
+| **Frame 1** | `Start` → `Update`           | `Start loop` → `Update loop`   |
+| **Frame 2** | `Update` → `Start Coroutine` | `Double Update` → `Start loop` |
+| **Frame 3** | `Update` → `Start Coroutine` | `Update loop` → `Start loop`   |
 
 Notice that double update we get between the first and second frame?
 
