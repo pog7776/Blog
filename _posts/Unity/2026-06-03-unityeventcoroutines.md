@@ -110,6 +110,8 @@ After the second frame `Update` will always execute before the `Start` coroutine
 This usually won't cause any trouble,
 but it's handy to be aware of this if you're working with event function coroutines.
 
+---
+
 ## Conclusion
 
 Super useful functionality, just be careful!
