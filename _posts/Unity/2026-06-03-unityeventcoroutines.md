@@ -5,7 +5,8 @@ date: 2026-06-03 14:30
 categories: [Unity]
 tags: [Unity, Coroutine, Events]
 description: "Exploring the quirky execution order of Unity event function coroutines, including a look at why changing Start()'s return type can cause an unexpected double update."
-image: /assets/img/blog/2026-06-03-unityeventcoroutines/banner.png
+media_subpath: /assets/img/blog/Unity/2026-06-03-unityeventcoroutines
+image: banner.png
 toc: false
 ---
 
@@ -103,7 +104,7 @@ So stepping through the first few frames of this script we'll get:
 
 Notice that double update we get between the first and second frame?
 
-![Log output](/assets/img/blog/2026-06-03-unityeventcoroutines/banner.png){: width="403" height="296" .w-50 .right}
+![Log output](banner.png){: width="403" height="296" .w-50 .right}
 In the first frame the `Start` contents will run before `Update` as expected.
 <br>
 After the second frame `Update` will always execute before the `Start` coroutine.
