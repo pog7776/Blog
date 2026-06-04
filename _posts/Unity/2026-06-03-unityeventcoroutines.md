@@ -3,7 +3,7 @@ layout: post
 title: "Unity Event Coroutines: The \"Double Update\" Trap"
 date: 2026-06-03 14:30
 categories: [Unity]
-tags: [Unity, Coroutine, Events]
+tags: [unity, coroutine]
 description: "Exploring the quirky execution order of Unity event function coroutines, including a look at why changing Start()'s return type can cause an unexpected double update."
 media_subpath: /assets/img/blog/Unity/2026-06-03-unityeventcoroutines
 image: banner.png
