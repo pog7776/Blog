@@ -11,9 +11,9 @@ toc: false
 published: false
 ---
 
-# The "New Project" button
+# The "New Project" demon
 
-Do you ever find yourself happily working on a project, you've created some really cool systems, you can't seem to tear yourself away from it.
+Do you ever find yourself happily working on a project, you've created some really cool systems and you can't seem to tear yourself away from it.
 <br>
 Then almost imperceptibly, like some kind of siren song you hear it whisper.
 
