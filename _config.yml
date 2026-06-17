@@ -39,8 +39,8 @@ social:
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/pog7776 # change to your Twitter homepage
     - https://github.com/pog7776 # change to your GitHub homepage
+    - https://twitter.com/pog7776 # change to your Twitter homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -151,12 +151,94 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: ""
+baseurl: "https://blog.tricklecharge.dev"
+
+# AI Visible Content › https://github.com/madmatvey/jekyll-ai-visible-content
+ai_visible_content:
+  enabled: true                              # Master switch
+
+  # --- Entity Identity ---
+  entity:
+    type: Person                             # Person | Organization
+    name: "Jack Cooper"
+    alternate_names:                          # Other name forms (translations, etc.)
+      - "pog7776"
+    job_title: "Software Developer"
+    description: "I spend a lot of time in Unity"
+    image: https://avatars.githubusercontent.com/u/37564169             # Relative or absolute URL
+    email: jack.cooper7776@gmail.com
+    location:
+      locality: "Sydney"
+      country: "AU"                          # ISO 3166-1 alpha-2
+    knows_about:                             # Skills/topics (used for entity linking too)
+      - Unity
+      - C#
+      - Dotnet
+      - Game Development
+    same_as:                                 # Links to authoritative profiles
+      - https://github.com/pog7776
+      - https://twitter.com/pog7776
+    occupation:
+      name: "Software Developer"
+      location_country: "Australia"
+      skills: "C#, Unity, Game Development"
+
+  # --- JSON-LD Behavior ---
+  json_ld:
+    auto_inject: true                        # Inject into <head> via hook (no manual tag needed)
+    include_website_schema: true             # WebSite + SearchAction on homepage
+    include_breadcrumbs: true                # BreadcrumbList on all pages
+    include_blog_posting: true               # BlogPosting on dated posts
+    include_faq: true                        # FAQPage when faq: in front matter
+    include_how_to: true                     # HowTo when how_to: in front matter
+    article_body: excerpt                    # none | excerpt | full
+    compact: false                           # Minify JSON-LD output
+
+  # --- AI Crawler Policies ---
+  crawlers:
+    allow_gptbot: true
+    allow_perplexitybot: true
+    allow_claudebot: true
+    allow_googlebot: true
+    allow_bingbot: true
+    custom_rules: []                         # [{user_agent: "Bot", directive: "Allow", path: "/"}]
+    generate_robots_txt: true
+
+  # --- llms.txt ---
+  llms_txt:
+    enabled: true
+    title: null                              # Defaults to site.title
+    description: null                        # Defaults to site.description
+    sections: []                             # [{heading: "Section", content: "text"}]
+    include_full_text: true                  # Also generate /llms-full.txt
+
+  # --- Internal Linking ---
+  linking:
+    enable_entity_links: true                # Auto-link known entities in post body
+    apply_to_metadata: false                 # Safe default: never inject <a> into head/SEO/JSON-LD/feed fields
+    entity_definitions: {}                   # Custom: slug -> {name, url, description}
+    max_links_per_entity_per_post: 1
+    enable_related_posts: true
+    related_posts_limit: 3
+
+  # --- Validation ---
+  validation:
+    warn_name_inconsistency: true
+    warn_missing_same_as: true
+    warn_missing_dates: true
+    warn_orphan_pages: true
+    warn_missing_descriptions: true
+    fail_build_on_error: false               # true = exit 1 on validation failure
+    content_only: true                       # Only validate authored HTML content pages
+    exclude_paths: []                        # Glob patterns to skip: ["/custom/*", "/drafts/*"]
+    verbose: false                           # true = show every warning; false = grouped summary
+    max_examples: 3                          # Max examples per warning group in summary mode
 
 # Plugins
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-ai-visible-content
 
 # ------------ The following options are not recommended to be modified ------------------
 
