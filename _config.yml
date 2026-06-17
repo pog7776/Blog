@@ -151,7 +151,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: "https://blog.tricklecharge.dev"
+baseurl: ""
 
 # AI Visible Content › https://github.com/madmatvey/jekyll-ai-visible-content
 ai_visible_content:
